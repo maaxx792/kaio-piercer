@@ -156,7 +156,7 @@ export const siteData: SiteData = {
     {
       id: "4",
       imageUrl:
-        "https://images.unsplash.com/photo-1610171880964-99e6ecb2a37a?q=80&w=900&auto=format&fit=crop",
+        "/public/images/rosto1.jpg",
       title: "Composição Industrial & Lóbulo em Ouro 18k",
       tag: "Projeto Exclusivo",
     },
