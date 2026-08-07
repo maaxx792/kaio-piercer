@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #030507;
+  color: #edf1f8;
+}
+
+::selection {
+  background-color: #1657c4;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030507;
+}
+::-webkit-scrollbar-thumb {
+  background: #161d2b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2c74ec;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass-panel {
+    background: rgba(11, 15, 22, 0.55);
+    border: 1px solid rgba(79, 151, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+}
+
+/* Signature "shiny" call to action used on primary buttons across the page */
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.shiny-cta {
+  --shiny-cta-bg: #030507;
+  --shiny-cta-highlight: #2c74ec;
+  --shiny-cta-highlight-2: #28e0f0;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #f6f9ff;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: linear-gradient(var(--shiny-cta-bg), var(--shiny-cta-bg)) padding-box,
+    conic-gradient(
+        from var(--angle),
+        transparent 0%,
+        var(--shiny-cta-highlight) 8%,
+        var(--shiny-cta-highlight-2) 12%,
+        transparent 22%
+      )
+      border-box;
+  border: 1px solid transparent;
+  box-shadow: 0 0 0 1px rgba(44, 116, 236, 0.25), 0 0 26px rgba(44, 116, 236, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: shiny-rotate 3.5s linear infinite;
+}
+
+.shiny-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px rgba(44, 116, 236, 0.4), 0 0 40px rgba(44, 116, 236, 0.55);
+}
+
+.shiny-cta:active {
+  transform: translateY(1px);
+}
+
+@keyframes shiny-rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* Ghost / outline CTA companion */
+.ghost-cta {
+  border: 1px solid rgba(88, 104, 132, 0.4);
+  background: rgba(8, 11, 16, 0.6);
+  transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+.ghost-cta:hover {
+  border-color: rgba(44, 116, 236, 0.6);
+  background: rgba(44, 116, 236, 0.08);
+}
