@@ -156,7 +156,7 @@ export const siteData: SiteData = {
     {
       id: "4",
       imageUrl:
-        "/public/images/rosto1.jpg",
+        "/images/rosto1.jpg",
       title: "Composição Industrial & Lóbulo em Ouro 18k",
       tag: "Projeto Exclusivo",
     },
