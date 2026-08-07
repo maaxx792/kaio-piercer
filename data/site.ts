@@ -135,21 +135,21 @@ export const siteData: SiteData = {
     {
       id: "1",
       imageUrl:
-        "images/boca1.webp",
+        "images/boca1.jpg",
       title: "Septo em Titânio com Acabamento Circular",
       tag: "Perfuração Facial / Septo",
     },
     {
       id: "2",
       imageUrl:
-        "images/orelha1.webp",
+        "images/orelha1.jpg",
       title: "Projeto Auricular com Hélix Duplo",
       tag: "Ear Styling",
     },
     {
       id: "3",
       imageUrl:
-        "images/orelha2.webp",
+        "images/orelha2.jpg",
       title: "Conch com Argola Segmentada em Titânio",
       tag: "Perfuração Auricular",
     },
